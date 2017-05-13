@@ -1,0 +1,18 @@
+@import '../../styles/theme.scss';
+
+.mlr-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.form-control {
+  border-radius: 0px;
+  box-shadow: none;
+  &:focus {
+    box-shadow:none;
+    border-color: $brand-warning;
+  }
+}
+.btn {
+  border-radius: 0px;
+}

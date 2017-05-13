@@ -1,0 +1,45 @@
+.hp-hero-wrapper {
+  //background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(237,26,59,1) 50%, rgba(237,26,59,1) 100%);
+    .hero-inner {
+      min-height:420px;
+      width: 100%;
+      background-size: cover;
+      margin:auto;
+      background-position:center;
+      background-repeat: no-repeat;
+      transition: border 200ms ease-out;
+      border:8px solid #000;
+      border-image: url('/img/sketchy-border.png') 6 repeat;
+      border-width: 6px;
+      &:after {
+          background-color: rgba(0,0,0,0.35);
+          content: '';
+          display:block;
+          position: relative;
+          height:420px;
+          margin: -6px;
+        }
+        .hero-name {
+          color:#FFF;
+          font-family: Helvetica, Arial, sans-serif;
+          font-weight:bold;
+          font-size:36px;
+          position: absolute;
+          margin:auto;
+          padding:10px;
+          z-index: 10;
+          display: inline-table;
+          @media (min-width: 768px) {
+            display:block;
+          }
+        }
+
+    }
+    .hero-description {
+      color:#333;
+      font-size: 14px;
+      position:relative;
+
+    }
+
+}

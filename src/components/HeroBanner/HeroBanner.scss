@@ -1,0 +1,30 @@
+.hero-wrapper {
+  background-size: cover;
+  min-height:480px;
+  margin: 0 -30px 0 -30px;
+  background-position:center;
+  background-repeat: no-repeat;
+  transition: border 200ms ease-out;
+  background-attachment: fixed;
+  .hero-inner {
+    position:relative;
+    z-index: 999;
+
+    h2 {
+    color: #FFF;
+    font-size: 48px;
+    padding:20px;
+    background-color: rgba(0,0,0,0.5);
+    }
+    .hero-description {
+      padding:20px;
+      background-color: rgba(0,0,0,0.5);
+      color:#fff;
+      font-size:24px;
+      font-weight:300;
+      margin-top: -10px;
+    }
+
+  }
+
+}

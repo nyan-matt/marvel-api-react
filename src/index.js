@@ -22,11 +22,11 @@ const appElement = (
       <Switch>
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/characters" component={CharacterListView} />
-        <Route exact path="/characters/:id" component={CharacterView} />
+        <Route path="/characters/:id" component={CharacterView} />
         <Route exact path="/comics" component={ComicListView} />
-        <Route exact path="/comics/:id" component={ComicView} />
+        <Route path="/comics/:id" component={ComicView} />
         <Route exact path="/series" component={SeriesListView} />
-        <Route exact path="/series/:id" component={SeriesView} />
+        <Route path="/series/:id" component={SeriesView} />
         <Route component={FoOhFoView} />
       </Switch>
       </AppContainer>

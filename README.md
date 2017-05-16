@@ -4,4 +4,4 @@ A small project using React & isomorphic-fetch to illustrate client-side fetchin
 
 Started from [create-react-app](https://github.com/facebookincubator/create-react-app), extended via [react-custom-scripts](https://github.com/kitze/custom-react-scripts) for including SASS functionality. Base styles are from Bootstrap with minimal customization.
 
-![GIF](public/images/mapi.gif)
+![GIF](public/img/mapi.gif)

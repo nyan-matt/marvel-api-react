@@ -52,6 +52,10 @@ class HomeContainer extends Component {
     }
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.adjustSlideNumber.bind(this))
+  }
+
   render() {
 
     const {featuredChars, error, heroSlideCount } = this.state

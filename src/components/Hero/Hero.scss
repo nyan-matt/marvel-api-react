@@ -23,15 +23,12 @@
           color:#FFF;
           font-family: Helvetica, Arial, sans-serif;
           font-weight:bold;
-          font-size:36px;
+          font-size:16px;
           position: absolute;
           margin:auto;
-          padding:10px;
+          padding:20px 10px;
           z-index: 10;
-          display: inline-table;
-          @media (min-width: 768px) {
-            display:block;
-          }
+          
         }
 
     }

@@ -20,12 +20,14 @@ class HomeContainer extends Component {
     this.state = {
       loading: true,
       featuredChars: [],
-      error: false
+      error: false,
+      heroSlideCount: 3
     }
   }
 
   componentWillMount() {
     Featured.map((id => this.handleFetchRelated(id)))
+    window.addEventListener('resize', this.adjustSlideNumber.bind(this))
   }
 
   handleFetchRelated(id) {
@@ -42,8 +44,17 @@ class HomeContainer extends Component {
     fetchRequest.catch(error => this.setState({ error : true }))
   }
 
+  adjustSlideNumber() {
+    if (window.innerWidth < 768) {
+      this.setState({heroSlideCount: 1})
+    } else {
+      this.setState({heroSlideCount: 3})
+    }
+  }
+
   render() {
-    const {featuredChars, error } = this.state
+
+    const {featuredChars, error, heroSlideCount } = this.state
     return (
       <div>
         <Container classNames={'red-stripe-bg'}>
@@ -51,7 +62,7 @@ class HomeContainer extends Component {
             {featuredChars.length !== Featured.length ?
               !error ? <Loader /> : <div className='alert alert-danger' role='alert'>Error Fetching data</div>
               :
-              <Slider slidesToShow={1} slidesToScroll={1} lazy dots={true} draggable={false} arrows={false}>
+              <Slider slidesToShow={this.state.heroSlideCount} slidesToScroll={this.state.heroSlideCount} lazy dots={true} draggable={false} arrows={false}>
               {featuredChars.map(({id, name, thumbnail, description}, i) => (
                 <div key={i}>
                   <Link to={`/characters/${id}`}>

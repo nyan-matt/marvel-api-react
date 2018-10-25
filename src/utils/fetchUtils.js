@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch'
 // sign up for a developer account at developer.marvel.com
 // and export it from /src/utils/config.js
 import { API_KEY } from './config'
-const BASE_URL = 'http://gateway.marvel.com/v1/public'
+const BASE_URL = 'https://gateway.marvel.com/v1/public'
 const PUBLIC_KEY = API_KEY || '__MARVEL_API_PUBLIC_KEY__'
 const authParams = `apikey=${PUBLIC_KEY}`
 

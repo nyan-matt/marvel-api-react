@@ -58,7 +58,7 @@
     "object-assign": "4.1.0",
     "postcss-loader": "1.0.0",
     "promise": "7.1.1",
-    "react-dev-utils": "^0.4.2",
+    "react-dev-utils": "^11.0.4",
     "recursive-readdir": "2.1.0",
     "rimraf": "2.5.4",
     "sass-loader": "^4.0.2",
